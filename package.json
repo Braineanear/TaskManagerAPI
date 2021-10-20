@@ -4,9 +4,7 @@
   "main": "src/server.js",
   "author": "Mahmoud Yasser",
   "scripts": {
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel src -d build",
-    "build": "yarn run clean && yarn run build-babel",
+    "build": "babel src -d build && babel docs -d build-docs",
     "start:dev": "yarn run build && nodemon build/server.js",
     "start:prod": "yarn run build && node build/server.js"
   },
@@ -40,6 +38,7 @@
     "joi": "^17.4.2",
     "mongoose": "^6.0.11",
     "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.1.6",
     "winston": "^3.3.3",
     "xss-clean": "^0.1.1"
   }
