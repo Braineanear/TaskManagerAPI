@@ -4,7 +4,9 @@
   "main": "src/server.js",
   "author": "Mahmoud Yasser",
   "scripts": {
-    "build": "babel src -d build --copy-files",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel src -d build",
+    "build": "yarn run clean && yarn run build-bable",
     "start:dev": "yarn run build && nodemon build/server.js",
     "start:prod": "node build/server.js"
   },
