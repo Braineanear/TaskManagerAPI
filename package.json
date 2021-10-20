@@ -8,7 +8,7 @@
     "build-babel": "babel src -d build",
     "build": "yarn run clean && yarn run build-bable",
     "start:dev": "yarn run build && nodemon build/server.js",
-    "start:prod": "node build/server.js"
+    "start:prod": "yarn run build && node build/server.js"
   },
   "license": "MIT",
   "devDependencies": {
