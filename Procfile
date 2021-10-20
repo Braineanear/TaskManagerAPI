@@ -1,1 +1,1 @@
-web: babel src -d build && node build/server.js
+web: yarn run start:prod
