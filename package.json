@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel src -d build",
-    "build": "yarn run clean && yarn run build-bable",
+    "build": "yarn run clean && yarn run build-babel",
     "start:dev": "yarn run build && nodemon build/server.js",
     "start:prod": "yarn run build && node build/server.js"
   },
